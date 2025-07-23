@@ -3,3 +3,11 @@ pytest
 webdriver-manager
 openpyxl
 allure-pytest
+# Cài thư viện
+pip install selenium pytest webdriver-manager openpyxl allure-pytest
+
+# Tạo lại venv mới:
+python -m venv venv
+
+# Kích hoạt venv:
+venv\Scripts\activate

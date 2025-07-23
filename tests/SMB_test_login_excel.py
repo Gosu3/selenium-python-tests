@@ -5,7 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import openpyxl
 
 def get_login_data():
-    wb = openpyxl.load_workbook("login_data.xlsx")
+    wb = openpyxl.load_workbook("login_data_smb.xlsx")
     sheet = wb["Sheet1"]
     data = []
     for row in sheet.iter_rows(min_row=2, values_only=True):  # Sửa lại nếu dữ liệu bắt đầu từ dòng 2
@@ -32,5 +32,3 @@ def test_login_excel(driver, username, password, expected_result):
             EC.presence_of_element_located((By.CLASS_NAME, "invalid-feedback"))
         )
         assert "invalid" in driver.page_source.lower() or "sai" in driver.page_source.lower()
-
-git pull origin main
