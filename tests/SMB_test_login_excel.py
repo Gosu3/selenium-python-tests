@@ -32,3 +32,5 @@ def test_login_excel(driver, username, password, expected_result):
             EC.presence_of_element_located((By.CLASS_NAME, "invalid-feedback"))
         )
         assert "invalid" in driver.page_source.lower() or "sai" in driver.page_source.lower()
+
+git pull origin main
